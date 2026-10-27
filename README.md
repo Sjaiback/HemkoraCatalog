@@ -20,3 +20,9 @@ Desde esta carpeta: `python -m http.server 5180 --bind 127.0.0.1 --directory dis
 Fotografía editorial de naturaleza muerta con cartera estructurada rosa empolvado, frasco de perfume de vidrio con tapa dorada, labial negro y dorado, rosas y peonías rosadas. Pedestal de travertino, satén crema y rosa, luz cálida natural y sombras orgánicas. Sin texto, marcas ni logotipos. Composición horizontal 3:2 de boutique elegante y femenina.
 
 La publicación y su identidad se configuran en `.openai/hosting.json`.
+
+## GitHub y GitHub Pages
+
+Repositorio: https://github.com/Sjaiback/HemkoraCatalog
+
+El código completo vive en `main`. La rama `gh-pages` publica exclusivamente el contenido de `dist/`; no requiere instalación de dependencias ni backend. Para futuras actualizaciones: guardar los cambios en main, ejecutar `git subtree split --prefix dist -b pages-build` y subir ese resultado a `gh-pages`. La configuración de GitHub Pages usa `gh-pages` y `/` como directorio.
