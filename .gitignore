@@ -1,0 +1,5 @@
+.preview/
+*.tar.gz
+*.zip
+node_modules/
+.env*
