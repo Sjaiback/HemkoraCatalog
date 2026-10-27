@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light"><meta name="theme-color" content="#f9f6f1">
+  <title>Hemkora · Para todas tus versiones</title>
+  <link rel="canonical" href="https://hemkora-catalogo-digital.spicyspoon13.chatgpt.site/">
+  <meta property="og:title" content="Hemkora · Para todas tus versiones"><meta property="og:description" content="Un catálogo para descubrir, página a página."><meta property="og:image" content="https://hemkora-catalogo-digital.spicyspoon13.chatgpt.site/assets/hemkora-editorial.png">
+  <meta name="description" content="Abre el universo Hemkora. Maquillaje, perfumes, accesorios, ropa, carteras y flores en un catálogo que se disfruta página a página.">
+  <link rel="icon" href="assets/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script type="module" src="catalog.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+  <header class="site-header">
+    <a href="#inicio" class="brand" aria-label="Hemkora, inicio"><img src="assets/logo.png" alt="Hemkora" width="150" height="52"></a>
+    <nav class="desktop-nav" aria-label="Navegación"><a href="#catalogo">El catálogo</a><a href="#seleccion">Nuestra selección</a><button data-how>Cómo elegir</button></nav>
+    <button class="favorites-button" data-open-favorites><span data-icon="heart"></span><span class="favorites-label">Mis favoritos</span><span class="favorite-count" data-count>0</span></button>
+  </header>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="edition"><span></span> EL UNIVERSO HEMKORA</div>
+        <h1>Para todas<br>tus <em>versiones.</em></h1>
+        <p>La que brilla. La que se atreve.<br>La que encuentra belleza en los pequeños detalles.</p>
+        <a class="button button-dark" href="#catalogo">Encuentra tu favorito <span data-icon="arrow-right"></span></a>
+        <div class="hero-bottom"><span class="mini-star">✧</span><span>Seis colecciones.<br>Infinitas formas de ser tú.</span><a href="#catalogo" aria-label="Bajar al catálogo" class="scroll-link"><span data-icon="arrow-down"></span></a></div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-photo" src="assets/hemkora-editorial.png" alt="Cartera rosa, perfume, labial y flores sobre una superficie de piedra clara" fetchpriority="high" width="1536" height="1024">
+        <span class="image-caption">BEAUTY IN EVERY DETAIL</span>
+        <div class="hero-stamp"><span>HEMKORA</span><i>H</i><span>CON AMOR, PARA TI</span></div>
+      </div>
+      <span class="hero-index">01 — 06</span>
+    </section>
+    <div class="collection-ribbon" aria-label="Nuestras categorías"><span>Maquillaje</span><i>✧</i><span>Perfumes</span><i>✧</i><span>Accesorios</span><i>✧</i><span>Ropa</span><i>✧</i><span>Carteras</span><i>✧</i><span>Arreglos florales</span></div>
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading reveal"><div><span class="section-kicker">EL CATÁLOGO</span><h2>Lo que te gusta,<br><em>página a página.</em></h2></div><p>Un pequeño paseo por todo lo bonito.<br>Elige una colección y empieza a hojear.</p></div>
+      <div class="category-tabs" role="group" aria-label="Colecciones del catálogo" id="category-tabs"></div>
+      <div class="book-stage">
+        <div class="book-edges" aria-hidden="true"></div>
+        <div class="book" id="book" role="region" aria-label="Catálogo interactivo, usa las flechas para pasar de página" tabindex="0">
+          <div class="paper paper-left" id="left-page"></div><div class="paper paper-right" id="right-page"></div>
+          <div class="book-spine" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="book-controls"><span class="turn-hint"><span data-icon="hand"></span><span>Desliza o pasa la página</span></span><div class="pagination"><button class="circle-button" id="previous" aria-label="Página anterior"><span data-icon="arrow-left"></span></button><span class="page-counter" id="page-counter" aria-live="polite">01 <span>/ 06</span></span><button class="circle-button" id="next" aria-label="Página siguiente"><span data-icon="arrow-right"></span></button></div><div class="book-progress" aria-hidden="true"><span id="book-progress"></span></div></div>
+    </section>
+    <section class="curated-section" id="seleccion">
+      <div class="curated-intro reveal"><span class="section-kicker">EL ARTE DE ELEGIR</span><h2>Hay cosas que <br>simplemente <em>enamoran.</em></h2><p>Una fragancia que se queda. Un detalle que acompaña.<br>Un regalo que dice todo.</p></div>
+      <div class="curated-grid" id="curated-grid"></div>
+    </section>
+    <section class="closing-section reveal"><span class="closing-spark">✧</span><p>No necesitas una ocasión especial.</p><h2>Tú eres <em>la ocasión.</em></h2><a class="button button-outline" href="#catalogo">Vuelve a descubrir <span data-icon="arrow-up-right"></span></a><span class="closing-spark second">✧</span></section>
+  </main>
+  <footer><div class="footer-top"><a class="footer-logo" href="#inicio"><img src="assets/logo.png" alt="Hemkora" width="180" height="64"></a><p>Un universo de detalles,<br>elegidos para ti.</p><button data-how>Cómo usar el catálogo <span data-icon="arrow-up-right"></span></button></div><div class="footer-bottom"><span>© <span id="year">2026</span> Hemkora Boutique</span><span>Catálogo de muestra · Productos y precios ilustrativos</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+  <div id="drawer-backdrop" class="overlay" hidden></div>
+  <aside class="favorites-drawer" id="favorites-drawer" aria-label="Mis favoritos" aria-modal="true" role="dialog" hidden><header><div><span class="section-kicker">TU SELECCIÓN</span><h2>Lo que te <em>encanta.</em></h2></div><button class="circle-button" data-close-favorites aria-label="Cerrar favoritos"><span data-icon="close"></span></button></header><div id="favorites-list"></div><div class="drawer-bottom"><div class="selection-total"><span>Total de referencia</span><strong id="selection-total">S/ 0.00</strong></div><button class="button button-dark" id="copy-selection">Copiar mi selección <span data-icon="copy"></span></button><p>Guarda tu lista y compártela con Hemkora para consultar disponibilidad. Esta muestra no realiza compras.</p></div></aside>
+  <dialog id="product-dialog" class="product-dialog"><button class="dialog-close circle-button" data-close-product aria-label="Cerrar detalle"><span data-icon="close"></span></button><div id="product-detail"></div></dialog>
+  <dialog id="how-dialog" class="how-dialog"><button class="dialog-close circle-button" data-close-how aria-label="Cerrar ayuda"><span data-icon="close"></span></button><span class="section-kicker">A TU RITMO</span><h2>Encuentra algo<br><em>muy tú.</em></h2><ol><li><span>01</span><div><h3>Explora</h3><p>Elige una colección. Pasa las páginas con las flechas, el teclado o deslizando en tu celular.</p></div></li><li><span>02</span><div><h3>Enamórate</h3><p>Toca un producto para ver su detalle y guarda los que te gusten en el corazón.</p></div></li><li><span>03</span><div><h3>Haz tu selección</h3><p>Abre tus favoritos y copia tu lista para compartirla con Hemkora. Los productos y precios de esta edición son ejemplos.</p></div></li></ol><button class="button button-dark" data-close-how>Vamos a descubrir <span data-icon="arrow-right"></span></button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
