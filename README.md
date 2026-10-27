@@ -25,4 +25,6 @@ La publicación y su identidad se configuran en `.openai/hosting.json`.
 
 Repositorio: https://github.com/Sjaiback/HemkoraCatalog
 
+Catálogo publicado: https://sjaiback.github.io/HemkoraCatalog/
+
 El código completo vive en `main`. La rama `gh-pages` publica exclusivamente el contenido de `dist/`; no requiere instalación de dependencias ni backend. Para futuras actualizaciones: guardar los cambios en main, ejecutar `git subtree split --prefix dist -b pages-build` y subir ese resultado a `gh-pages`. La configuración de GitHub Pages usa `gh-pages` y `/` como directorio.
